@@ -1569,3 +1569,11 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-head); color: var(--text-dark); line
   .hero-badge { font-size: 0.75rem; }
   .contact-form-card { padding: 24px 20px; }
 }
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+}
