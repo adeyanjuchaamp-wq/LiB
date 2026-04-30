@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Life in Bytes</title>
+  <meta name="description" content="Get in touch with Benjamin — educator, school builder, and the voice behind Life in Bytes."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+        <span class="logo-text">Life <span class="accent">in Bytes</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="blog.html" class="btn btn-primary btn-sm">Start Reading</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero contact-hero">
+    <div class="container">
+      <span class="section-tag">Let's Connect</span>
+      <h1>Get in Touch</h1>
+      <p>Whether you have a question, a speaking invitation, a collaboration idea, or you simply want to say hello — Benjamin would love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT GRID ===== -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Info -->
+        <div class="contact-info">
+          <h2>Let's Start a Conversation</h2>
+          <p>
+            Have a topic you'd like Benjamin to write about? Want to invite him to speak at your event, school, or conference? Looking to collaborate on an educational initiative? Or just want to share how his content has helped you?
+          </p>
+          <p>Every message is read personally. Response time is typically within 48 hours.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@lifeinbytes.com</p>
+              <p style="font-size:0.8rem;color:var(--text-light);">Best for detailed inquiries and collaborations</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Location</h4>
+              <p>Nigeria 🇳🇬</p>
+              <p style="font-size:0.8rem;color:var(--text-light);">Open to virtual calls worldwide</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div>
+              <h4>Speaking &amp; Workshops</h4>
+              <p>Available for school events, conferences &amp; staff training</p>
+              <p style="font-size:0.8rem;color:var(--text-light);">Select the "Speaking" topic in the form</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Response Time</h4>
+              <p>Within 24–48 hours on weekdays</p>
+              <p style="font-size:0.8rem;color:var(--text-light);">Weekend responses may be delayed</p>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="contact-social" style="margin-top: 32px;">
+            <h4>Find Me on Social Media</h4>
+            <div class="contact-social-links">
+              <a href="#" class="social-link-big">
+                <i class="fab fa-twitter"></i> Twitter
+              </a>
+              <a href="#" class="social-link-big">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="#" class="social-link-big">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+              <a href="#" class="social-link-big">
+                <i class="fab fa-youtube"></i> YouTube
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="contact-form-card">
+          <h2>Send a Message</h2>
+          <p>Fill in the details below and I'll get back to you as soon as possible.</p>
+
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="e.g. Chidi" required/>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="e.g. Okonkwo" required/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What's This About? *</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="general">General Enquiry</option>
+                <option value="blog">Blog Topic Suggestion</option>
+                <option value="speaking">Speaking / Event Invitation</option>
+                <option value="collaboration">Collaboration Proposal</option>
+                <option value="school">School Consultation</option>
+                <option value="newsletter">Newsletter Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea id="message" name="message" placeholder="Tell me more about what you have in mind..." required></textarea>
+            </div>
+
+            <div class="form-group" style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;">
+              <input type="checkbox" id="subscribe" name="subscribe" style="width:auto;margin-top:3px;flex-shrink:0;accent-color:var(--accent);" checked/>
+              <label for="subscribe" style="font-size:0.875rem;font-weight:400;color:var(--text-body);cursor:pointer;">
+                Also subscribe me to the Life in Bytes newsletter for weekly insights.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <span class="section-tag">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width:720px;margin:0 auto;" id="faqContainer">
+
+        <div class="faq-item" style="border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;">
+          <button class="faq-toggle" onclick="toggleFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--white);border:none;cursor:pointer;font-family:var(--font-head);font-weight:600;font-size:0.95rem;color:var(--text-dark);text-align:left;gap:16px;">
+            Do you offer school consulting services?
+            <i class="fas fa-chevron-down" style="color:var(--accent);flex-shrink:0;transition:transform 0.3s;"></i>
+          </button>
+          <div class="faq-body" style="display:none;padding:0 24px 20px;color:var(--text-body);font-size:0.9rem;line-height:1.7;">
+            Yes! I offer consulting to school owners and administrators on curriculum development, school systems, staff training, and integrating technology. Use the contact form above and select "School Consultation."
+          </div>
+        </div>
+
+        <div class="faq-item" style="border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;">
+          <button class="faq-toggle" onclick="toggleFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--white);border:none;cursor:pointer;font-family:var(--font-head);font-weight:600;font-size:0.95rem;color:var(--text-dark);text-align:left;gap:16px;">
+            Are you available for speaking engagements?
+            <i class="fas fa-chevron-down" style="color:var(--accent);flex-shrink:0;transition:transform 0.3s;"></i>
+          </button>
+          <div class="faq-body" style="display:none;padding:0 24px 20px;color:var(--text-body);font-size:0.9rem;line-height:1.7;">
+            Absolutely. I speak on topics including EdTech and AI in education, school leadership, parenting in the digital age, and purpose-driven living. I'm available for conferences, school events, church programs, and corporate training sessions.
+          </div>
+        </div>
+
+        <div class="faq-item" style="border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;">
+          <button class="faq-toggle" onclick="toggleFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--white);border:none;cursor:pointer;font-family:var(--font-head);font-weight:600;font-size:0.95rem;color:var(--text-dark);text-align:left;gap:16px;">
+            Can I suggest a topic for the blog?
+            <i class="fas fa-chevron-down" style="color:var(--accent);flex-shrink:0;transition:transform 0.3s;"></i>
+          </button>
+          <div class="faq-body" style="display:none;padding:0 24px 20px;color:var(--text-body);font-size:0.9rem;line-height:1.7;">
+            Please do! Reader-inspired content is some of my best work. Use the contact form above, select "Blog Topic Suggestion," and share your idea. If it aligns with the blog's mission, I'll write about it and give you a shoutout.
+          </div>
+        </div>
+
+        <div class="faq-item" style="border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;">
+          <button class="faq-toggle" onclick="toggleFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--white);border:none;cursor:pointer;font-family:var(--font-head);font-weight:600;font-size:0.95rem;color:var(--text-dark);text-align:left;gap:16px;">
+            How often does new content get published?
+            <i class="fas fa-chevron-down" style="color:var(--accent);flex-shrink:0;transition:transform 0.3s;"></i>
+          </button>
+          <div class="faq-body" style="display:none;padding:0 24px 20px;color:var(--text-body);font-size:0.9rem;line-height:1.7;">
+            I publish 2–3 articles per week across all categories. Subscribe to the newsletter to get new posts delivered directly to your inbox so you never miss an update.
+          </div>
+        </div>
+
+        <div class="faq-item" style="border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;">
+          <button class="faq-toggle" onclick="toggleFAQ(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:var(--white);border:none;cursor:pointer;font-family:var(--font-head);font-weight:600;font-size:0.95rem;color:var(--text-dark);text-align:left;gap:16px;">
+            Can my school partner with Life in Bytes?
+            <i class="fas fa-chevron-down" style="color:var(--accent);flex-shrink:0;transition:transform 0.3s;"></i>
+          </button>
+          <div class="faq-body" style="display:none;padding:0 24px 20px;color:var(--text-body);font-size:0.9rem;line-height:1.7;">
+            Yes, I'm open to meaningful partnerships with schools, EdTech companies, and educational organisations. Let's explore how we can create value together. Send a collaboration proposal through the contact form.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+            <span class="logo-text">Life <span class="accent">in Bytes</span></span>
+          </a>
+          <p>Where Education, Technology, and Purpose Meet. Thought leadership for educators, parents, and school leaders.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="blog.html?cat=education"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="blog.html?cat=tech"><i class="fas fa-chevron-right"></i> Tech &amp; AI</a></li>
+            <li><a href="blog.html?cat=parenting"><i class="fas fa-chevron-right"></i> Parenting</a></li>
+            <li><a href="blog.html?cat=leadership"><i class="fas fa-chevron-right"></i> School Leadership</a></li>
+            <li><a href="blog.html?cat=growth"><i class="fas fa-chevron-right"></i> Personal Growth</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p><i class="fas fa-envelope"></i> hello@lifeinbytes.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Nigeria</p>
+          <a href="contact.html" class="btn btn-outline btn-sm mt-sm">Send a Message</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Life in Bytes · Benjamin. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart" style="color:#F59E0B"></i> for educators everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFAQ(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('i');
+      const isOpen = body.style.display === 'block';
+
+      // Close all
+      document.querySelectorAll('.faq-body').forEach(b => b.style.display = 'none');
+      document.querySelectorAll('.faq-toggle i').forEach(i => {
+        i.style.transform = 'rotate(0deg)';
+      });
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.style.background = 'var(--white)';
+        item.querySelector('.faq-toggle').style.color = 'var(--text-dark)';
+      });
+
+      if (!isOpen) {
+        body.style.display = 'block';
+        icon.style.transform = 'rotate(180deg)';
+        btn.closest('.faq-item').style.background = 'var(--light-bg)';
+        btn.style.color = 'var(--accent-dark)';
+        body.style.animation = 'slideDown 0.3s ease';
+      }
+    }
+  </script>
+  <style>
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</body>
+</html>

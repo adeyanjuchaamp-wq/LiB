@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="postTitle">Blog Post – Life in Bytes</title>
+  <meta name="description" id="postDescription" content="Read this article on Life in Bytes — where education, technology, and purpose meet."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgress"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+        <span class="logo-text">Life <span class="accent">in Bytes</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="blog.html" class="btn btn-primary btn-sm">Start Reading</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== POST HERO ===== -->
+  <section class="post-hero" id="postHero">
+    <div class="container">
+      <div class="post-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="blog.html">Blog</a>
+        <i class="fas fa-chevron-right"></i>
+        <span id="heroCategory">Article</span>
+      </div>
+      <span class="category-badge" id="heroBadge"></span>
+      <h1 id="heroTitle">Loading...</h1>
+      <div class="post-meta" style="margin-top:16px;">
+        <span id="heroDate"><i class="far fa-calendar"></i></span>
+        <span id="heroRead"><i class="far fa-clock"></i></span>
+        <span><i class="fas fa-user"></i> Benjamin</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POST LAYOUT ===== -->
+  <div class="container">
+    <div class="post-layout">
+
+      <!-- Main Content -->
+      <div class="post-content-wrap">
+
+        <!-- Featured Image -->
+        <div class="post-featured-img" id="postFeaturedImg">
+          <div id="featuredImgPlaceholder" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,0.3);"></div>
+        </div>
+
+        <!-- Post Body -->
+        <article class="post-content" id="postBody">
+          <!-- Injected dynamically -->
+        </article>
+
+        <!-- Tags -->
+        <div class="post-tags" id="postTags">
+          <span>Tags:</span>
+        </div>
+
+        <!-- Share -->
+        <div style="margin-top:28px;padding:24px;background:var(--light-bg);border-radius:12px;border:1px solid var(--border);">
+          <p style="font-family:var(--font-head);font-weight:600;font-size:0.9rem;color:var(--text-dark);margin-bottom:14px;">
+            <i class="fas fa-share-alt" style="color:var(--accent);"></i> Share this article
+          </p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="#" onclick="sharePost('twitter')" class="btn btn-sm" style="background:#1DA1F2;color:#fff;gap:8px;">
+              <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="#" onclick="sharePost('linkedin')" class="btn btn-sm" style="background:#0A66C2;color:#fff;">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a href="#" onclick="sharePost('whatsapp')" class="btn btn-sm" style="background:#25D366;color:#fff;">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <button id="copyBtn" onclick="copyLink()" class="btn btn-sm btn-outline" style="gap:8px;">
+              <i class="fas fa-link"></i> Copy Link
+            </button>
+          </div>
+        </div>
+
+        <!-- Author Box -->
+        <div class="author-box">
+          <div class="author-box-avatar">B</div>
+          <div>
+            <h4>Written by Benjamin</h4>
+            <p>Educator, school builder, tech advocate, and intentional father. Benjamin writes about education, technology, parenting, school leadership, and faith at the intersection of purpose-driven living.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="post-sidebar">
+
+        <!-- Newsletter -->
+        <div class="sidebar-widget" style="background:var(--primary);border:none;text-align:center;">
+          <i class="fas fa-envelope-open-text" style="font-size:1.8rem;color:var(--accent);margin-bottom:10px;display:block;"></i>
+          <h3 style="color:var(--white);font-size:1rem;border-color:transparent;margin-bottom:8px;">Get Weekly Insights</h3>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.82rem;margin-bottom:14px;">Join 2,000+ readers who get Life in Bytes delivered to their inbox.</p>
+          <form onsubmit="sidebarSubscribe(event)">
+            <input id="sidebarEmail" type="email" placeholder="your@email.com" required
+              style="width:100%;padding:10px 14px;border-radius:6px;border:2px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-family:var(--font-body);font-size:0.85rem;outline:none;margin-bottom:10px;"/>
+            <button type="submit" class="btn btn-accent btn-sm" style="width:100%;justify-content:center;">
+              Subscribe <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+          <div id="sidebarSubSuccess" style="display:none;color:var(--success);font-size:0.85rem;margin-top:8px;">
+            <i class="fas fa-check-circle"></i> You're subscribed!
+          </div>
+        </div>
+
+        <!-- Recent Posts -->
+        <div class="sidebar-widget">
+          <h3>Recent Posts</h3>
+          <div class="recent-post-item">
+            <a href="post.html?id=1" class="recent-post-thumb placeholder-featured" style="background:linear-gradient(135deg,#667eea,#764ba2);">
+              <i class="fas fa-robot"></i>
+            </a>
+            <div>
+              <a href="post.html?id=1"><h5>How Nigerian Schools Can Prepare for the AI Age</h5></a>
+              <span>March 10, 2025</span>
+            </div>
+          </div>
+          <div class="recent-post-item">
+            <a href="post.html?id=2" class="recent-post-thumb" style="background:linear-gradient(135deg,#F59E0B,#D97706);">
+              <i class="fas fa-chess-king"></i>
+            </a>
+            <div>
+              <a href="post.html?id=2"><h5>5 Mistakes School Owners Make</h5></a>
+              <span>March 5, 2025</span>
+            </div>
+          </div>
+          <div class="recent-post-item">
+            <a href="post.html?id=3" class="recent-post-thumb" style="background:linear-gradient(135deg,#EC4899,#be185d);">
+              <i class="fas fa-child"></i>
+            </a>
+            <div>
+              <a href="post.html?id=3"><h5>Raising Responsible Boys in a Digital World</h5></a>
+              <span>Feb 28, 2025</span>
+            </div>
+          </div>
+          <div class="recent-post-item">
+            <a href="post.html?id=4" class="recent-post-thumb placeholder-leadership2" style="background:linear-gradient(135deg,#0A2540,#1e3a5f);">
+              <i class="fas fa-building"></i>
+            </a>
+            <div>
+              <a href="post.html?id=4"><h5>How I Built a School While Working Full-Time</h5></a>
+              <span>Feb 20, 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget">
+          <h3>Categories</h3>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="blog.html?cat=education" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;transition:all 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='#3B82F6';this.style.background='rgba(59,130,246,0.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--white)'">
+              <span style="display:flex;align-items:center;gap:10px;font-size:0.875rem;font-weight:600;color:var(--text-dark);"><i class="fas fa-graduation-cap" style="color:#3B82F6;width:16px;"></i> Education</span>
+              <span style="font-size:0.775rem;color:var(--text-light);background:var(--light-bg);padding:2px 8px;border-radius:10px;">3</span>
+            </a>
+            <a href="blog.html?cat=tech" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;transition:all 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='#8B5CF6';this.style.background='rgba(139,92,246,0.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--white)'">
+              <span style="display:flex;align-items:center;gap:10px;font-size:0.875rem;font-weight:600;color:var(--text-dark);"><i class="fas fa-microchip" style="color:#8B5CF6;width:16px;"></i> Tech &amp; AI</span>
+              <span style="font-size:0.775rem;color:var(--text-light);background:var(--light-bg);padding:2px 8px;border-radius:10px;">3</span>
+            </a>
+            <a href="blog.html?cat=parenting" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;transition:all 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='#EC4899';this.style.background='rgba(236,72,153,0.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--white)'">
+              <span style="display:flex;align-items:center;gap:10px;font-size:0.875rem;font-weight:600;color:var(--text-dark);"><i class="fas fa-heart" style="color:#EC4899;width:16px;"></i> Parenting</span>
+              <span style="font-size:0.775rem;color:var(--text-light);background:var(--light-bg);padding:2px 8px;border-radius:10px;">2</span>
+            </a>
+            <a href="blog.html?cat=leadership" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;transition:all 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='#F59E0B';this.style.background='rgba(245,158,11,0.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--white)'">
+              <span style="display:flex;align-items:center;gap:10px;font-size:0.875rem;font-weight:600;color:var(--text-dark);"><i class="fas fa-chess-king" style="color:#D97706;width:16px;"></i> School Leadership</span>
+              <span style="font-size:0.775rem;color:var(--text-light);background:var(--light-bg);padding:2px 8px;border-radius:10px;">2</span>
+            </a>
+            <a href="blog.html?cat=growth" style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:8px;transition:all 0.2s;text-decoration:none;" onmouseover="this.style.borderColor='#10B981';this.style.background='rgba(16,185,129,0.05)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--white)'">
+              <span style="display:flex;align-items:center;gap:10px;font-size:0.875rem;font-weight:600;color:var(--text-dark);"><i class="fas fa-seedling" style="color:#10B981;width:16px;"></i> Personal Growth</span>
+              <span style="font-size:0.775rem;color:var(--text-light);background:var(--light-bg);padding:2px 8px;border-radius:10px;">2</span>
+            </a>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== RELATED POSTS ===== -->
+  <section class="related-posts-section">
+    <div class="container">
+      <h2 class="section-title">You Might Also Like</h2>
+      <div class="posts-grid" id="relatedPosts"></div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+            <span class="logo-text">Life <span class="accent">in Bytes</span></span>
+          </a>
+          <p>Where Education, Technology, and Purpose Meet. Thought leadership for educators, parents, and school leaders.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="blog.html?cat=education"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="blog.html?cat=tech"><i class="fas fa-chevron-right"></i> Tech &amp; AI</a></li>
+            <li><a href="blog.html?cat=parenting"><i class="fas fa-chevron-right"></i> Parenting</a></li>
+            <li><a href="blog.html?cat=leadership"><i class="fas fa-chevron-right"></i> School Leadership</a></li>
+            <li><a href="blog.html?cat=growth"><i class="fas fa-chevron-right"></i> Personal Growth</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p><i class="fas fa-envelope"></i> hello@lifeinbytes.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Nigeria</p>
+          <a href="contact.html" class="btn btn-outline btn-sm mt-sm">Send a Message</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Life in Bytes · Benjamin. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart" style="color:#F59E0B"></i> for educators everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/posts.js"></script>
+  <script>
+    function sidebarSubscribe(e) {
+      e.preventDefault();
+      const email = document.getElementById('sidebarEmail').value;
+      setTimeout(() => {
+        e.target.style.display = 'none';
+        document.getElementById('sidebarSubSuccess').style.display = 'block';
+      }, 800);
+    }
+
+    function sharePost(platform) {
+      event.preventDefault();
+      const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent(document.getElementById('heroTitle').textContent);
+      const urls = {
+        twitter: `https://twitter.com/intent/tweet?text=${title}&url=${url}`,
+        linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
+        whatsapp: `https://wa.me/?text=${title}%20${url}`
+      };
+      if (urls[platform]) window.open(urls[platform], '_blank', 'noopener');
+    }
+  </script>
+</body>
+</html>

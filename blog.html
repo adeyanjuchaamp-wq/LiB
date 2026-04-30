@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog – Life in Bytes</title>
+  <meta name="description" content="Explore articles on education, tech & AI, parenting, school leadership, and personal growth by Benjamin."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+        <span class="logo-text">Life <span class="accent">in Bytes</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="blog.html" class="btn btn-primary btn-sm">Start Reading</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">The Blog</span>
+      <h1>Insights, Stories &amp; Ideas</h1>
+      <p>Explore articles crafted to educate, inspire, and equip educators, parents, and school leaders across Africa and beyond.</p>
+    </div>
+  </section>
+
+  <!-- ===== FILTER BAR ===== -->
+  <div class="filter-bar">
+    <div class="container">
+      <div class="filter-bar-inner">
+        <button class="filter-btn active" data-cat="all">
+          <i class="fas fa-th-large"></i> All Articles
+          <span class="filter-count">12</span>
+        </button>
+        <button class="filter-btn" data-cat="education">
+          <i class="fas fa-graduation-cap"></i> Education
+          <span class="filter-count">3</span>
+        </button>
+        <button class="filter-btn" data-cat="tech">
+          <i class="fas fa-microchip"></i> Tech &amp; AI
+          <span class="filter-count">3</span>
+        </button>
+        <button class="filter-btn" data-cat="parenting">
+          <i class="fas fa-heart"></i> Parenting
+          <span class="filter-count">2</span>
+        </button>
+        <button class="filter-btn" data-cat="leadership">
+          <i class="fas fa-chess-king"></i> School Leadership
+          <span class="filter-count">2</span>
+        </button>
+        <button class="filter-btn" data-cat="growth">
+          <i class="fas fa-seedling"></i> Personal Growth
+          <span class="filter-count">2</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BLOG GRID ===== -->
+  <section class="blog-grid-section">
+    <div class="container">
+
+      <!-- Search bar -->
+      <div class="search-bar-wrapper">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:12px;">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off"/>
+            <button type="button">Search</button>
+          </div>
+          <p style="font-size:0.875rem;color:var(--text-light);">
+            Showing <strong id="resultsCount" style="color:var(--text-dark);">12</strong> articles
+          </p>
+        </div>
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="posts-grid" id="blogGrid">
+
+        <!-- POST 1 – Tech/AI Featured -->
+        <article class="post-card blog-post-item" data-category="tech">
+          <div class="post-card-img">
+            <div class="post-img-placeholder" style="background:linear-gradient(135deg,#667eea,#764ba2);">
+              <i class="fas fa-robot"></i>
+            </div>
+            <span class="category-badge badge-tech">Tech &amp; AI</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> March 10, 2025</span>
+              <span><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=1">How Nigerian Schools Can Prepare Students for the AI Age</a>
+            </h3>
+            <p class="post-excerpt">Artificial Intelligence is reshaping industries and careers. Yet many Nigerian schools still operate on a 20th-century curriculum. Here are actionable strategies school leaders can adopt today.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=1" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 2 – Leadership -->
+        <article class="post-card blog-post-item" data-category="leadership">
+          <div class="post-card-img">
+            <div class="post-img-placeholder placeholder-leadership">
+              <i class="fas fa-chess-king"></i>
+            </div>
+            <span class="category-badge badge-leadership">School Leadership</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> March 5, 2025</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=2">5 Mistakes School Owners Make (And How to Avoid Them)</a>
+            </h3>
+            <p class="post-excerpt">Running a school is one of the most impactful things you can do — but it's full of costly blind spots that can derail even well-intentioned leaders. Learn from those who've been there.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=2" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 3 – Parenting -->
+        <article class="post-card blog-post-item" data-category="parenting">
+          <div class="post-card-img">
+            <div class="post-img-placeholder placeholder-parenting">
+              <i class="fas fa-child"></i>
+            </div>
+            <span class="category-badge badge-parenting">Parenting</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Feb 28, 2025</span>
+              <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=3">Raising Responsible Boys in a Digital World</a>
+            </h3>
+            <p class="post-excerpt">The screens are everywhere, and the dangers are real. But with the right framework, you can raise boys who are digitally wise, emotionally strong, and purpose-driven.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=3" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 4 – Leadership -->
+        <article class="post-card blog-post-item" data-category="leadership">
+          <div class="post-card-img">
+            <div class="post-img-placeholder placeholder-leadership2">
+              <i class="fas fa-building"></i>
+            </div>
+            <span class="category-badge badge-leadership">School Leadership</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Feb 20, 2025</span>
+              <span><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=4">How I Built a School While Working Full-Time</a>
+            </h3>
+            <p class="post-excerpt">People often ask how I managed to build a thriving educational institution while still holding down a full-time job. Here's the honest, unfiltered story behind the journey.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=4" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 5 – Tech/AI -->
+        <article class="post-card blog-post-item" data-category="tech">
+          <div class="post-card-img">
+            <div class="post-img-placeholder placeholder-tech">
+              <i class="fas fa-code"></i>
+            </div>
+            <span class="category-badge badge-tech">Tech &amp; AI</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Feb 14, 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=5">Top Tech Skills Every Child Should Learn Before 15</a>
+            </h3>
+            <p class="post-excerpt">The future belongs to those who think computationally, create digitally, and collaborate globally. Here are the non-negotiable skills every young learner needs to thrive.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=5" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 6 – Growth/Faith -->
+        <article class="post-card blog-post-item" data-category="growth">
+          <div class="post-card-img">
+            <div class="post-img-placeholder placeholder-faith">
+              <i class="fas fa-praying-hands"></i>
+            </div>
+            <span class="category-badge badge-growth">Personal Growth</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Feb 8, 2025</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=6">Faith, Family and the Classroom: Finding Balance as an Educator</a>
+            </h3>
+            <p class="post-excerpt">Being an educator, a parent, a spouse, and a person of faith is no small thing. Here are the rhythms and principles Benjamin uses to stay grounded and fully effective.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=6" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 7 – Education -->
+        <article class="post-card blog-post-item" data-category="education">
+          <div class="post-card-img">
+            <div class="post-img-placeholder placeholder-edu">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <span class="category-badge badge-education">Education</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Feb 1, 2025</span>
+              <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=7">Why Assessment Must Change: Beyond the Examination Hall</a>
+            </h3>
+            <p class="post-excerpt">Standardized exams measure very little of what truly matters. It's time for a radical rethink of how we evaluate learning and student potential in African classrooms.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=7" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 8 – Education -->
+        <article class="post-card blog-post-item" data-category="education">
+          <div class="post-card-img">
+            <div class="post-img-placeholder" style="background:linear-gradient(135deg,#0ea5e9,#0284c7);">
+              <i class="fas fa-book-reader"></i>
+            </div>
+            <span class="category-badge badge-education">Education</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Jan 22, 2025</span>
+              <span><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=8">The Teacher Who Changed Everything: A Tribute to Mentors</a>
+            </h3>
+            <p class="post-excerpt">Every great person can point to a teacher who saw potential in them before they saw it in themselves. This is an ode to those quiet heroes who shape destinies.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=8" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 9 – Tech/AI -->
+        <article class="post-card blog-post-item" data-category="tech">
+          <div class="post-card-img">
+            <div class="post-img-placeholder" style="background:linear-gradient(135deg,#7c3aed,#4c1d95);">
+              <i class="fas fa-brain"></i>
+            </div>
+            <span class="category-badge badge-tech">Tech &amp; AI</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Jan 15, 2025</span>
+              <span><i class="far fa-clock"></i> 9 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=9">ChatGPT in the Classroom: Threat or Tool?</a>
+            </h3>
+            <p class="post-excerpt">Teachers are divided — is AI going to make students lazy, or is it the greatest teaching assistant ever invented? Benjamin shares a practical perspective that cuts through the noise.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=9" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 10 – Parenting -->
+        <article class="post-card blog-post-item" data-category="parenting">
+          <div class="post-card-img">
+            <div class="post-img-placeholder" style="background:linear-gradient(135deg,#f43f5e,#be123c);">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="category-badge badge-parenting">Parenting</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Jan 8, 2025</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=10">6 Conversations Every Parent Must Have With Their Teenager</a>
+            </h3>
+            <p class="post-excerpt">The teenage years are full of identity questions, peer pressure, and life-defining moments. These six conversations could be the difference between a lost child and a found one.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=10" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 11 – Education -->
+        <article class="post-card blog-post-item" data-category="education">
+          <div class="post-card-img">
+            <div class="post-img-placeholder" style="background:linear-gradient(135deg,#0891b2,#164e63);">
+              <i class="fas fa-globe-africa"></i>
+            </div>
+            <span class="category-badge badge-education">Education</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Dec 20, 2024</span>
+              <span><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=11">Decolonising the Curriculum: An African Perspective</a>
+            </h3>
+            <p class="post-excerpt">Decades after independence, many African schools still teach from frameworks built for colonial purposes. It's time for a curriculum that celebrates African identity, values, and aspirations.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=11" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- POST 12 – Growth -->
+        <article class="post-card blog-post-item" data-category="growth">
+          <div class="post-card-img">
+            <div class="post-img-placeholder" style="background:linear-gradient(135deg,#059669,#064e3b);">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <span class="category-badge badge-growth">Personal Growth</span>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span><i class="far fa-calendar"></i> Dec 10, 2024</span>
+              <span><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h3 class="post-title">
+              <a href="post.html?id=12">The 5 AM Habit That Changed My Life as a School Owner</a>
+            </h3>
+            <p class="post-excerpt">Most people are reactive. The best leaders I know are proactive. This one morning habit completely transformed Benjamin's productivity, clarity, and sense of purpose.</p>
+            <div class="post-footer">
+              <div class="author-mini">
+                <div class="author-avatar">B</div>
+                <span>Benjamin</span>
+              </div>
+              <a href="post.html?id=12" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /posts-grid -->
+
+      <!-- No results message -->
+      <div id="noResults" style="display:none;text-align:center;padding:60px 20px;">
+        <i class="fas fa-search" style="font-size:2.5rem;color:var(--text-light);margin-bottom:16px;display:block;"></i>
+        <h3 style="color:var(--text-dark);margin-bottom:8px;">No articles found</h3>
+        <p style="color:var(--text-body);">Try adjusting your search or filter to find what you're looking for.</p>
+        <button onclick="resetFilters()" class="btn btn-outline btn-sm" style="margin-top:16px;">Clear Filters</button>
+      </div>
+
+      <!-- Load More -->
+      <div style="text-align:center;margin-top:48px;" id="loadMoreWrap">
+        <p style="color:var(--text-light);font-size:0.875rem;margin-bottom:12px;">Showing all articles for now. New posts every week.</p>
+        <a href="#" class="btn btn-outline btn-lg" onclick="showComingSoon(event)">
+          <i class="fas fa-spinner"></i> Load More Articles
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section section-pad">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <h2>Never Miss a Post</h2>
+        <p>Subscribe to get new articles delivered straight to your inbox every week — no fluff, just value.</p>
+        <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+          <div class="newsletter-input-group">
+            <input type="text" placeholder="Your first name" id="nlName" required/>
+            <input type="email" placeholder="Your email address" id="nlEmail" required/>
+            <button type="submit" class="btn btn-primary">
+              Subscribe <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <p class="newsletter-note"><i class="fas fa-lock"></i> We respect your privacy. Unsubscribe anytime.</p>
+        </form>
+        <div class="newsletter-success" id="nlSuccess" style="display:none;">
+          <i class="fas fa-check-circle"></i>
+          <span>You're in! Welcome to the Life in Bytes community.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+            <span class="logo-text">Life <span class="accent">in Bytes</span></span>
+          </a>
+          <p>Where Education, Technology, and Purpose Meet. Thought leadership for educators, parents, and school leaders.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="blog.html?cat=education"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="blog.html?cat=tech"><i class="fas fa-chevron-right"></i> Tech &amp; AI</a></li>
+            <li><a href="blog.html?cat=parenting"><i class="fas fa-chevron-right"></i> Parenting</a></li>
+            <li><a href="blog.html?cat=leadership"><i class="fas fa-chevron-right"></i> School Leadership</a></li>
+            <li><a href="blog.html?cat=growth"><i class="fas fa-chevron-right"></i> Personal Growth</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p><i class="fas fa-envelope"></i> hello@lifeinbytes.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Nigeria</p>
+          <a href="contact.html" class="btn btn-outline btn-sm mt-sm">Send a Message</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Life in Bytes · Benjamin. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart" style="color:#F59E0B"></i> for educators everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function resetFilters() {
+      const allBtn = document.querySelector('.filter-btn[data-cat="all"]');
+      if (allBtn) allBtn.click();
+      const searchInput = document.getElementById('blogSearch');
+      if (searchInput) { searchInput.value = ''; searchInput.dispatchEvent(new Event('input')); }
+    }
+
+    function showComingSoon(e) {
+      e.preventDefault();
+      const wrap = document.getElementById('loadMoreWrap');
+      wrap.innerHTML = `
+        <div style="display:inline-flex;align-items:center;gap:10px;background:var(--light-bg);padding:14px 24px;border-radius:8px;border:1px solid var(--border);color:var(--text-body);font-size:0.9rem;">
+          <i class="fas fa-check-circle" style="color:var(--success);"></i>
+          You've seen all current articles. New posts drop every week — <a href="#newsletter" style="color:var(--accent-dark);font-weight:600;">subscribe</a> to stay updated!
+        </div>
+      `;
+    }
+
+    // Watch for empty results
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new MutationObserver(() => {
+        const visible = document.querySelectorAll('.blog-post-item:not([style*="display: none"])').length;
+        const noResults = document.getElementById('noResults');
+        if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+        const countEl = document.getElementById('resultsCount');
+        if (countEl) countEl.textContent = visible;
+      });
+      document.querySelectorAll('.blog-post-item').forEach(item => {
+        observer.observe(item, { attributes: true, attributeFilter: ['style'] });
+      });
+    });
+  </script>
+</body>
+</html>
