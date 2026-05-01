@@ -141,57 +141,7 @@ const posts = {
       <p>Raising a responsible boy in a digital world is hard. But it's one of the most important things you'll ever do. Start with relationship. Add intentionality. Trust the process.</p>
     `
   },
-  4: {
-    id: 4,
-    title: "How I Built a School While Working Full-Time",
-    category: "leadership",
-    categoryLabel: "School Leadership",
-    badgeClass: "badge-leadership",
-    date: "Feb 20, 2025",
-    readTime: "10 min read",
-    icon: "fas fa-building",
-    bgGradient: "linear-gradient(135deg, #0A2540 0%, #1e3a5f 100%)",
-    tags: ["School Building", "Entrepreneurship", "Personal Story", "Education"],
-    excerpt: "Here's the honest, unfiltered story of how I built a thriving educational institution while holding down a full-time job.",
-    content: `
-      <p>People always ask me: "How did you do it? How did you build a school while still holding down a full-time job, raising a family, and staying sane?"</p>
-      <p>The honest answer is: barely. And also — intentionally. Let me tell you the real story.</p>
-
-      <h2>The Beginning: A Problem I Couldn't Ignore</h2>
-      <p>It started not with a grand vision, but with a problem. I was frustrated. As someone working in the education sector, I kept seeing schools that had the infrastructure but lacked the soul. Schools where children sat in classrooms for six hours and emerged less curious than when they arrived. Schools where teachers taught for a salary, not a calling. Schools that prepared children for exams — and almost nothing else.</p>
-      <p>I had opinions. I had ideas. I had energy. What I didn't have was money, time, or a roadmap.</p>
-
-      <h2>The Decision to Start Anyway</h2>
-      <p>I made the decision in 2019. Not to quit my job — that would have been financial suicide with a family to feed. But to start building, quietly, on the margins of my life. Early mornings. Lunch breaks. Weekends. I used every available gap.</p>
-      <p>I registered the school as a business. I started writing the vision document — what kind of school did I actually want to build? What values would it embody? What would success look like for a child who passed through it?</p>
-
-      <h2>The Three Things That Made It Possible</h2>
-      <h3>1. A Crystal-Clear Vision</h3>
-      <p>I spent three months just writing and refining the vision. Not because I was overthinking — but because I knew that when the hard times came (and they always do), the clarity of vision would be the anchor. It was.</p>
-
-      <h3>2. The Right People Before the Right Resources</h3>
-      <p>I didn't have capital. What I had was relationships. I found a vice principal who believed in the vision and agreed to manage operations while I worked my day job. I found a business-minded friend who helped me structure the finances. I found parents willing to enrol their children before we even had a permanent building.</p>
-      <p>People who believe in what you're building will do things for you that money alone cannot buy.</p>
-
-      <h3>3. Protecting the First Three Years</h3>
-      <p>The first three years of any school are make-or-break. I made a decision early: I would not try to be everywhere or scale quickly. I would obsess over quality for the first cohort of students. Their results, their experience, their parents' trust — that was the only marketing strategy I needed.</p>
-      <p>Word of mouth in Nigerian school circles is powerful. If your school is genuinely good, parents tell other parents. That's exactly what happened.</p>
-
-      <h2>What I Wish I Had Known</h2>
-      <p>If I could go back and tell my 2019 self something, it would be this:</p>
-      <ul>
-        <li><strong>Hire slower, fire faster.</strong> Wrong people in key roles will cost you more than you can imagine — in money, culture, and energy.</li>
-        <li><strong>Document everything from Day 1.</strong> Policies, processes, standards — write them down before you think you need to.</li>
-        <li><strong>Price your services for sustainability, not popularity.</strong> Underpriced fees attract the wrong parents and underpay your staff. Both kill schools.</li>
-        <li><strong>Take care of yourself.</strong> The school cannot outlast the health and resilience of its founder. Rest is strategy.</li>
-      </ul>
-
-      <h2>Where We Are Today</h2>
-      <p>Today, the school stands as proof that the vision was worth it. We've impacted hundreds of students, developed a teaching team I'm genuinely proud of, and built something that runs with systems — not just my presence. I transitioned out of my full-time job eventually, but on my terms, when the school was ready.</p>
-      <p>It wasn't easy. But it was worth every sleepless night, every difficult conversation, every moment of doubt. If you're sitting on an idea for a school right now, I want you to know: it's possible. And you don't have to have everything figured out to start.</p>
-      <p>Start with the vision. The rest will follow.</p>
-    `
-  },
+  
   5: {
     id: 5,
     title: "Top Tech Skills Every Child Should Learn Before 15",
